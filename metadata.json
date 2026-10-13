@@ -1,0 +1,6 @@
+{
+  "name": "Abonelik Takibi",
+  "description": "Aboneliklerinizi takip edebileceğiniz, aylık ve yıllık harcamalarınızı analiz edebileceğiniz şık bir yönetim paneli.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

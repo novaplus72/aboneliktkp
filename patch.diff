@@ -1,0 +1,18 @@
+--- app/src/main/java/com/example/ui/screens/AboutDialog.kt
++++ app/src/main/java/com/example/ui/screens/AboutDialog.kt
+@@ -140,8 +140,12 @@
+                             modifier = Modifier
+                                 .clip(RoundedCornerShape(8.dp))
+                                 .clickable {
+-                                    val intent = Intent(Intent.ACTION_SENDTO).apply {
+-                                        data = Uri.parse("mailto:novaplus7221@gmail.com")
++                                    try {
++                                        val intent = Intent(Intent.ACTION_SENDTO).apply {
++                                            data = Uri.parse("mailto:novaplus7221@gmail.com")
++                                        }
++                                        context.startActivity(intent)
++                                    } catch (e: Exception) {
++                                        // Ignore or show toast
+                                     }
+-                                    context.startActivity(intent)
+                                 }
